@@ -1,6 +1,6 @@
 /*
  * Module name: combo_lock_fsm
- * Author: [Student Name]
+ * Author: Kevin Duong
  * Description: Lab - 2-Number Combination Lock (Sequence: 5 -> 9)
  */
 
@@ -54,6 +54,11 @@ module combo_lock_fsm (
 
                 if (enter_i) begin
                      // [YOUR CODE HERE]
+                     if (digit_i == 4'b5) begin
+                            next_state = S_SAW_CODE_1;
+                     end else begin
+                            next_state = S_IDLE;
+                     end
                 end
             end
 
