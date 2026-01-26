@@ -1,5 +1,6 @@
 module counter #(
 //Default data width is in n-bits
+//Testing
     parameter int DWIDTH = 5
     parameter int INC_SIZE = 1;
 )(
