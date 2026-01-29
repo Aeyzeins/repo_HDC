@@ -82,6 +82,7 @@ module combo_lock_fsm (
 
                 if (enter_i) begin
                      // [YOUR CODE HERE]
+                        next_state = S_IDLE;
                 end
             end
 
@@ -102,14 +103,24 @@ module combo_lock_fsm (
 
             S_IDLE: begin
                  // [YOUR CODE HERE]
+                 if (state == S_IDLE) begin
+                    unlock_o = 1'b0;
+                 end
+                
             end
 
             S_SAW_CODE_1: begin
                  // [YOUR CODE HERE]
+                 if (state == S_SAW_CODE_1) begin
+                    unlock_o = 1'b0;
+                 end
             end
 
             S_OPEN: begin
                  // [YOUR CODE HERE]
+                 if (state == S_OPEN) begin
+                    unlock_o = 1'b1;
+                 end
             end
         endcase
     end
