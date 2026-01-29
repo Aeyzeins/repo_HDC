@@ -69,6 +69,11 @@ module combo_lock_fsm (
 
                 if (enter_i) begin
                      // [YOUR CODE HERE]
+                     if (digit_i == 4'b9) begin
+                        next_state = S_OPEN;
+                    end else begin //its not 9
+                        next_state = S_IDLE;
+                    end
                 end
             end
 
